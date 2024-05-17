@@ -47,6 +47,7 @@
             this.btnReset = new Guna.UI2.WinForms.Guna2CircleButton();
             this.ClickTimerChecker = new System.Windows.Forms.Timer(this.components);
             this.WinnerTimerChecker = new System.Windows.Forms.Timer(this.components);
+            this.DragFormControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // BtnImage1
@@ -349,6 +350,12 @@
             this.WinnerTimerChecker.Enabled = true;
             this.WinnerTimerChecker.Tick += new System.EventHandler(this.WinnerChecker_Tick);
             // 
+            // DragFormControl
+            // 
+            this.DragFormControl.DockIndicatorTransparencyValue = 0.6D;
+            this.DragFormControl.TargetControl = this;
+            this.DragFormControl.UseTransparentDrag = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +405,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnReset;
         private System.Windows.Forms.Timer ClickTimerChecker;
         private System.Windows.Forms.Timer WinnerTimerChecker;
+        private Guna.UI2.WinForms.Guna2DragControl DragFormControl;
     }
 }
 

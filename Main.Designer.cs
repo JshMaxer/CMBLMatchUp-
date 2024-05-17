@@ -34,6 +34,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnStart = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuit = new Guna.UI2.WinForms.Guna2Button();
+            this.DragFormControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +99,18 @@
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // DragFormControl
+            // 
+            this.DragFormControl.DockIndicatorTransparencyValue = 0.6D;
+            this.DragFormControl.TargetControl = this;
+            this.DragFormControl.UseTransparentDrag = true;
+            // 
+            // DragControl
+            // 
+            this.DragControl.DockIndicatorTransparencyValue = 0.6D;
+            this.DragControl.TargetControl = this.pictureBox1;
+            this.DragControl.UseTransparentDrag = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,5 +137,7 @@
         private Guna.UI2.WinForms.Guna2Button btnStart;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnQuit;
+        private Guna.UI2.WinForms.Guna2DragControl DragFormControl;
+        private Guna.UI2.WinForms.Guna2DragControl DragControl;
     }
 }

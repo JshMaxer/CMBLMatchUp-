@@ -26,8 +26,6 @@ namespace MatchUp
 
         int clickChecker = 0;
 
-        bool winnerCheker = false;
-
         public Form1()
         {
             InitializeComponent();
